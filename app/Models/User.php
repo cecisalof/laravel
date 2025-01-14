@@ -33,6 +33,16 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    
+    /** 
+     * 
+     * Set the custom table name
+     * 
+     * This tells Laravel’s Eloquent ORM that the User model should interact
+     *  with the users_pec4 table rather than the default users table.
+     */
+    protected $table = 'users_pec4'; // new table name
+    
     /**
      * Get the attributes that should be cast.
      *
