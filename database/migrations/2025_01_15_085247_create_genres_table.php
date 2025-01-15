@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
+            //asegura que no puede haber dos géneros con el mismo nombre.
+            $table->string('name')->unique();
+            //Laravel crea automáticamente dos columnas (created_at y updated_at) para llevar un registro de cuándo se creó o actualizó el género.
             $table->timestamps();
         });
     }
