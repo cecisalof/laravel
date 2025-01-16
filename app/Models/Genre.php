@@ -11,6 +11,6 @@ class Genre extends Model
     public function records()
     {
         // indica que un Genre puede estar asociado con muchos Records y, viceversa, un Record puede tener muchos Genres.
-        return $this->belongsToMany(Record::class);
+        return $this->belongsToMany(Record::class, 'genre_record')->withTimestamps();
     }
 }

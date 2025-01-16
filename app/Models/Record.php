@@ -17,6 +17,6 @@ class Record extends Model
         /* define relación muchos a muchos entre dos modelos. 
         * En este caso, un Record (disco de vinilo) puede pertenecer a varios Genre (géneros musicales) y viceversa.
         */
-        return $this->belongsToMany(Genre::class);
+        return $this->belongsToMany(Genre::class, 'genre_record')->withTimestamps();
     }
 }
