@@ -16,6 +16,9 @@ class RecordFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Record::class;
+
     public function definition(): array
     {
         return [
