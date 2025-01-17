@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         // Obtener los primeros 5 discos de vinilo
         $records = Record::take(5)->get();  // Esto debe adaptarse según la lógica real para obtener discos.
-
-        return view('home', compact('records'));
+    
+        return view('home', compact('records')); // Pasa los registros a la vista
     }
 }
