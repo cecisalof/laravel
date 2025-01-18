@@ -8,13 +8,16 @@
             <p>No se encontraron discos de vinilo.</p>
         @else
             <ul class="list-group">
-                @foreach ($records as $record)
-                    <li class="list-group-item">
-                        <strong>{{ $record->title }}</strong>
-                        <p>{{ $record->artist }}</p>
-                        <p>{{ $record->genre }}</p>
-                    </li>
-                @endforeach
+            @foreach ($records as $record)
+                <div>
+                    <a href="{{ url('/record/' . $record->id) }}">
+                        <h3>{{ $record->title }}</h3>
+                    </a>
+                    <img src="{{ asset('storage/records/' . $record->cover_image) }}" alt="{{ $record->title }}">
+
+                    <p>{{ $record->price }} €</p>
+                </div>
+            @endforeach
             </ul>
         @endif
     </div>
