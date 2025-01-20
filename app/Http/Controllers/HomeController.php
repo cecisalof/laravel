@@ -20,4 +20,9 @@ class HomeController extends Controller
     
         return view('home', compact('records')); // Pasa los registros a la vista
     }
+
+    public function recordDetails(Record $record)
+    {
+        return view('record', compact('record'));
+    }
 }
