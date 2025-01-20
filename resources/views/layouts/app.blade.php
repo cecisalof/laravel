@@ -10,9 +10,9 @@
     <nav>
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ url('/api/records/1') }}" target="_blank">API_records</a></li>
-            <li><a href="{{ url('/api/record/1') }}" target="_blank">API_record</a></li>
-            <li><a href="{{ url('/api/genre/1/1') }}" target="_blank">API_genre</a></li>
+            <li><a href="{{ asset('/api/records/1') }}" target="_blank">API_records</a></li>
+            <li><a href="{{ asset('/api/record/1') }}" target="_blank">API_record</a></li>
+            <li><a href="{{ asset('/api/genre/1/1') }}" target="_blank">API_genre</a></li>
             <!-- Rutas generadas por Breeze para autenticación -->
             @if (Route::has('login'))
                 @auth
