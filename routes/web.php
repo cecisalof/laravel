@@ -18,7 +18,9 @@ Route::get('/record/{record}', [HomeController::class, 'recordDetails']);
 Route::get('/api/records/{page}', [RecordController::class, 'showRecords']);
 // Ruta para obtener un disco específico por ID
 Route::get('/api/record/{id}', [RecordController::class, 'showRecord']);
-;
+// Ruta para obtener discos por género y paginación
+Route::get('/api/genre/{id}/{page}', [RecordController::class, 'getByGenre']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

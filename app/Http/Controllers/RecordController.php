@@ -25,11 +25,20 @@ class RecordController extends Controller
         return response()->json($record);
     }
 
-    // Endpoint para buscar discos por un criterio (por ejemplo, nombre del álbum)
-    // public function search(Request $request)
-    // {
-    //     $query = $request->input('query');
-    //     $records = Record::where('album', 'like', '%' . $query . '%')->get();
-    //     return response()->json($records);
-    // }
+    // Endpoint para listar discos por género con paginación
+    public function getByGenre($id, $page)
+    {
+        $recordsPerPage = 10;
+    
+        // Obtener los registros del género especificado con paginación
+        $records = Record::join('genre_record', 'records.id', '=', 'genre_record.record_id')
+                         ->where('genre_record.genre_id', $id)
+                         ->select('records.id', 'records.title', 'records.release_year')
+                         ->skip(($page - 1) * $recordsPerPage)
+                         ->take($recordsPerPage)
+                         ->get();
+    
+        return response()->json($records);
+    }
+    
 }
