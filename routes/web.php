@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecordController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -10,7 +11,14 @@ use Illuminate\Support\Facades\Route;
 
 // Página de inicio
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/record/{record}', [HomeController::class, 'show']);
+// Páginade detalle del disco
+Route::get('/record/{record}', [HomeController::class, 'recordDetails']);
+
+// Ruta para obtener discos con paginación
+Route::get('/api/records/{page}', [RecordController::class, 'showRecords']);
+// Ruta para obtener un disco específico por ID
+Route::get('/api/record/{id}', [RecordController::class, 'showRecord']);
+;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
