@@ -10,7 +10,7 @@
             <ul class="list-group">
             @foreach ($records as $record)
                 <div>
-                    <a href="{{ url('/record/' . $record->id) }}">
+                    <a href="{{ asset('/record/' . $record->id) }}">
                         <h3>{{ $record->title }}</h3>
                     </a>
                     <img src="{{ asset('storage/records/' . $record->cover_image) }}" alt="{{ $record->title }}">
