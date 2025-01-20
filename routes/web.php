@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Página de inicio
-Route::get('/', [HomeController::class, 'index'])->name('home'); 
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/record/{record}', [HomeController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
