@@ -5,10 +5,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecordController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // Página de inicio
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Páginade detalle del disco

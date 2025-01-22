@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\Record; // Importar el modelo Record
-use App\Models\Genre;  // Importar el modelo Genre
+use App\Models\Record;
+use App\Models\Genre;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +17,7 @@ class RecordFactory extends Factory
      * @return array<string, mixed>
      */
 
-    protected $model = Record::class;
+    protected $model = Record::class; // para especificar a qué modelo está asociada la fábrica. 
 
     public function definition(): array
     {
