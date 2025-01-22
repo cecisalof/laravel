@@ -13,7 +13,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <!-- Logo -->
-                    <div class="shrink-0 flex items-center">
+                    <div class="shrink-0 flex items-center" style="margin-right: 20px;">
                         <a href="{{ route('home') }}" class="text-lg font-semibold text-gray-900">Home</a>
                     </div>
                     <!-- Navegación principal -->
