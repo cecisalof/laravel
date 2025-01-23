@@ -29,7 +29,7 @@
                         <p class="my-1"><strong>Año de lanzamiento:</strong> {{ $record->release_year }}</p>
                         <p class="my-1"><strong>Estado:</strong> {{ $record->status }}</p>
                         <p class="my-1"><strong>Precio:</strong> {{ number_format($record->price, 2) }} €</p>
-                        <img src="{{ asset('storage/records/' . $record->cover_image) }}" alt="{{ $record->title }}" class="custom-image my-5">
+                        <img src="{{ asset('storage/records/' . $record->cover_image) }}" loading="lazy" alt="{{ $record->title }}" class="custom-image my-5">
                     </div>
                 </div>
             </div>

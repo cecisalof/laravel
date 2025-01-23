@@ -23,7 +23,7 @@
                                             <h1 class="my-2">{{ $record->title }}</h3>
                                         </a>
                                         <h2 class="my-2">{{ $record->artist }}</h2>
-                                        <img src="{{ asset('storage/records/' . $record->cover_image) }}" alt="{{ $record->title }}" class="custom-image">
+                                        <img src="{{ asset('storage/records/' . $record->cover_image) }}" loading="lazy" alt="{{ $record->title }}" class="custom-image">
                                         <p class="my-2">{{ $record->price }} €</p>
                                     </div>
                                 </li>
