@@ -18,13 +18,13 @@
                         <ul class="list-group">
                             @foreach ($records as $record)
                                 <li class="list-group-item">
-                                    <div class="my-5">
+                                    <div class="my-5 w-4/5">
                                         <a href="{{ asset('/record/' . $record->id) }}">
-                                            <h1>{{ $record->title }}</h3>
+                                            <h1 class="my-2">{{ $record->title }}</h3>
                                         </a>
+                                        <h2 class="my-2">{{ $record->artist }}</h2>
                                         <img src="{{ asset('storage/records/' . $record->cover_image) }}" alt="{{ $record->title }}" class="custom-image">
-
-                                        <p>{{ $record->price }} €</p>
+                                        <p class="my-2">{{ $record->price }} €</p>
                                     </div>
                                 </li>
                             @endforeach
