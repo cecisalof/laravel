@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+font-size: 1.5REM;
+}
+
+.custom-image {
+   width: 350px;
+}
+
+a {
+   color: #00A1D3; /* Cambia esto según tu diseño */
+   text-decoration: none;
+   font-weight: bold;
+}
+
+a:hover {
+   color: #00A1D3;
+   text-decoration: underline;
+   font-weight: bold;
+}
